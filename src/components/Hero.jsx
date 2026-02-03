@@ -152,7 +152,7 @@ const Hero = () => {
 
 
           {/* COUNTDOWN TIMER */}
-          <div className="mt-6 mb-4 grid grid-cols-4 gap-3 max-w-md mx-auto">
+          <div className="mt-6 mb-4 grid grid-cols-2 xs:grid-cols-4 gap-2 sm:gap-3 w-full max-w-md mx-auto">
             {[
               { label: "Days", value: timeLeft.days },
               { label: "Hours", value: timeLeft.hours },
@@ -166,14 +166,14 @@ const Hero = () => {
                   backdrop-blur-sm
                   border border-cyan-400/30
                   rounded-xl
-                  p-3
+                  p-2 sm:p-3
                   text-center
                 "
               >
-                <div className="text-xl sm:text-2xl font-bold text-white">
+                <div className="text-lg sm:text-2xl font-bold text-white">
                   {unit.value.toString().padStart(2, "0")}
                 </div>
-                <div className="text-xs sm:text-sm text-cyan-200 uppercase tracking-wider mt-1">
+                <div className="text-[10px] sm:text-sm text-cyan-200 uppercase tracking-wider mt-1">
                   {unit.label}
                 </div>
               </div>

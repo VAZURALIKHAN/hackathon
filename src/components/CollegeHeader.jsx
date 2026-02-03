@@ -18,80 +18,93 @@ const CollegeHeader = () => {
         <div
           className="
             max-w-7xl mx-auto
-            px-3 sm:px-4 md:px-8
-            py-3 md:py-4
+            px-4 py-3
             text-white
-            grid grid-cols-[auto_1fr_auto]
+            flex flex-col md:grid md:grid-cols-[auto_1fr_auto]
             items-center
-            gap-3 md:gap-4
+            gap-4
           "
         >
-          {/* LEFT LOGO */}
-          <div className="w-24 sm:w-28 md:w-36 flex justify-start">
+          {/* MOBILE ONLY: Top Row with Logos */}
+          <div className="flex w-full justify-between items-center md:hidden mb-1">
             <img
               src="/collegeleft.png"
               alt="St. Joseph College Logo"
-              className="h-16 sm:h-20 md:h-28 w-auto object-contain"
+              className="h-14 w-auto object-contain"
+            />
+            <img
+              src="/college-right.png"
+              alt="Accreditation Logo"
+              className="h-14 w-auto object-contain"
+            />
+          </div>
+
+          {/* DESKTOP ONLY: LEFT LOGO */}
+          <div className="hidden md:flex w-28 md:w-36 justify-start">
+            <img
+              src="/collegeleft.png"
+              alt="St. Joseph College Logo"
+              className="h-20 md:h-28 w-auto object-contain"
             />
           </div>
 
           {/* CENTER TEXT */}
-          <div className="text-center leading-tight overflow-hidden flex flex-col items-center">
+          <div className="text-center w-full flex flex-col items-center">
 
-
-
-            {/* COLLEGE NAME – SINGLE LINE, NO DOTS */}
+            {/* COLLEGE NAME */}
             <h1
               className="
-                text-[11px] xs:text-sm sm:text-lg md:text-3xl
+                text-lg xs:text-xl sm:text-2xl md:text-3xl
                 font-serif font-bold
+                leading-tight
                 tracking-tight sm:tracking-wide
-                whitespace-nowrap
                 drop-shadow-[0_1px_2px_rgba(255,255,255,0.35)]
+                text-center
               "
             >
               St. Joseph College of Engineering
             </h1>
 
-            {/* AFFILIATION – SINGLE LINE, NO DOTS */}
+            {/* AFFILIATION */}
             <p
               className="
-                mt-0.5
-                text-[9px] xs:text-[10px] sm:text-xs md:text-sm
+                mt-1
+                text-[10px] sm:text-xs md:text-sm
                 font-medium
                 text-white/90
-                whitespace-nowrap
+                text-center
+                leading-snug
               "
             >
               Approved by AICTE · Affiliated to Anna University
             </p>
 
             {/* UGC */}
-            <p className="text-[9px] sm:text-xs md:text-sm font-medium text-white/90">
+            <p className="text-[10px] sm:text-xs md:text-sm font-medium text-white/90 leading-snug">
               Under Section 2(f) & 12(B) of UGC Act 1956
             </p>
 
             {/* LOCATION */}
-            <p className="mt-0.5 text-[8px] sm:text-[10px] md:text-xs font-light text-white/80">
+            <p className="mt-0.5 text-[9px] sm:text-[10px] md:text-xs font-light text-white/80">
               Sriperumbudur, Chennai, Tamil Nadu
             </p>
 
-            {/* PARTNER LOGOS - ROW BELOW TEXT */}
-            <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mt-2">
+            {/* PARTNER LOGOS */}
+            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 mt-3">
               {[5, 2, 1, 3, 4].map((num) => (
-                <div key={num} className="p-1.5 bg-white rounded-lg shadow-sm hover:scale-105 transition-transform">
-                  <img src={`/logos/logo${num}.png`} alt={`Partner ${num}`} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
+                <div key={num} className="p-1 bg-white rounded-md sm:rounded-lg shadow-sm">
+                  <img src={`/logos/logo${num}.png`} alt={`Partner ${num}`} className="w-8 h-8 xs:w-10 xs:h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
                 </div>
               ))}
             </div>
           </div>
 
-          {/* RIGHT LOGO */}
-          <div className="w-24 sm:w-28 md:w-36 flex justify-end">
+          {/* DESKTOP ONLY: RIGHT LOGO */}
+          <div className="hidden md:flex w-28 md:w-36 justify-end">
             <img
               src="/college-right.png"
               alt="Accreditation Logo"
-              className="h-16 sm:h-20 md:h-28 w-auto object-contain"
+              className="h-20 md:h-28 w-auto object-contain"
             />
           </div>
         </div>
