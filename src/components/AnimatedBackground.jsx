@@ -171,7 +171,7 @@ const AnimatedBackground = () => {
             ref={canvasRef}
             className="absolute inset-0 -z-10 w-full h-full"
             style={{
-                background: "linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)",
+                background: "linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #ffffff 100%)",
             }}
         />
     );

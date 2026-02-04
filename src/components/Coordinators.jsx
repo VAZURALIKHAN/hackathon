@@ -2,14 +2,6 @@ import { motion } from "framer-motion";
 import AnimatedBackground from "./AnimatedBackground";
 
 export default function Coordinators() {
-  const handleCall = (phoneNumber) => {
-    window.location.href = `tel:${phoneNumber}`;
-  };
-
-  const handleWhatsApp = (phoneNumber) => {
-    window.location.href = `https://wa.me/${phoneNumber}`;
-  };
-
   const staffCoordinators = [
     { name: "Mr. K. Premkumar", designation: "AP/CSE", phone: "9943110035" },
     { name: "Ms. A. Beneta Mary", designation: "AP/CSE", phone: "9940010713" }
@@ -85,13 +77,16 @@ export default function Coordinators() {
                 </p>
 
                 {/* BUTTONS ROW */}
-                <div className="flex gap-4 justify-center">
+                <div className="flex gap-4 justify-center flex-wrap">
                   {/* WhatsApp Button */}
-                  <motion.button
+                  <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => handleWhatsApp(coord.phone)}
+                    href={`https://wa.me/${coord.phone}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
+                      min-w-[140px]
                       px-6 py-3
                       rounded-full
                       bg-gradient-to-r from-green-500 to-green-600
@@ -103,18 +98,21 @@ export default function Coordinators() {
                       hover:shadow-[0_0_35px_rgba(34,197,94,0.7)]
                       transition-all duration-300
                       flex items-center justify-center gap-2
+                      cursor-pointer
+                      no-underline
                     "
                   >
                     <span className="text-2xl">💬</span>
-                    WhatsApp
-                  </motion.button>
+                    What's App
+                  </motion.a>
 
                   {/* Call Button */}
-                  <motion.button
+                  <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => handleCall(coord.phone)}
+                    href={`tel:${coord.phone}`}
                     className="
+                      min-w-[140px]
                       px-6 py-3
                       rounded-full
                       bg-gradient-to-r from-blue-500 to-blue-600
@@ -126,11 +124,13 @@ export default function Coordinators() {
                       hover:shadow-[0_0_35px_rgba(59,130,246,0.7)]
                       transition-all duration-300
                       flex items-center justify-center gap-2
+                      cursor-pointer
+                      no-underline
                     "
                   >
                     <span className="text-2xl">📞</span>
                     Call
-                  </motion.button>
+                  </motion.a>
                 </div>
               </motion.div>
 
@@ -176,13 +176,16 @@ export default function Coordinators() {
                 </p>
 
                 {/* BUTTONS ROW */}
-                <div className="flex gap-4 justify-center">
+                <div className="flex gap-4 justify-center flex-wrap">
                   {/* WhatsApp Button */}
-                  <motion.button
+                  <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => handleWhatsApp(coord.phone)}
+                    href={`https://wa.me/${coord.phone}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
+                      min-w-[140px]
                       px-6 py-3
                       rounded-full
                       bg-gradient-to-r from-green-500 to-green-600
@@ -194,18 +197,21 @@ export default function Coordinators() {
                       hover:shadow-[0_0_35px_rgba(34,197,94,0.7)]
                       transition-all duration-300
                       flex items-center justify-center gap-2
+                      cursor-pointer
+                      no-underline
                     "
                   >
                     <span className="text-2xl">💬</span>
-                    WhatsApp
-                  </motion.button>
+                    What's App
+                  </motion.a>
 
                   {/* Call Button */}
-                  <motion.button
+                  <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => handleCall(coord.phone)}
+                    href={`tel:${coord.phone}`}
                     className="
+                      min-w-[140px]
                       px-6 py-3
                       rounded-full
                       bg-gradient-to-r from-blue-500 to-blue-600
@@ -217,11 +223,13 @@ export default function Coordinators() {
                       hover:shadow-[0_0_35px_rgba(59,130,246,0.7)]
                       transition-all duration-300
                       flex items-center justify-center gap-2
+                      cursor-pointer
+                      no-underline
                     "
                   >
                     <span className="text-2xl">📞</span>
                     Call
-                  </motion.button>
+                  </motion.a>
                 </div>
               </motion.div>
             ))}

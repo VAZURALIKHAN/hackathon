@@ -96,13 +96,22 @@ export default function Events() {
               )}
 
               {/* ICON */}
-              <div className="w-32 h-32 flex items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border-2 border-cyan-400/30 shadow-lg shadow-cyan-500/20 overflow-hidden">
+              <div className="w-32 h-32 flex items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border-2 border-cyan-400/30 shadow-lg shadow-cyan-500/20 overflow-hidden relative">
                 {e.image ? (
-                  <img
-                    src={e.image}
-                    alt={e.title}
-                    className="w-full h-full object-cover mix-blend-screen hover:scale-110 transition-transform duration-500"
-                  />
+                  <>
+                    <img
+                      src={`${import.meta.env.BASE_URL}${e.image}`}
+                      alt={e.title}
+                      className="w-full h-full object-cover mix-blend-screen hover:scale-110 transition-transform duration-500"
+                      onError={(el) => {
+                        el.currentTarget.style.display = "none";
+                        el.currentTarget.nextElementSibling.style.display = "block";
+                      }}
+                    />
+                    <span className="text-7xl filter drop-shadow-lg hidden">
+                      {e.icon}
+                    </span>
+                  </>
                 ) : (
                   <span className="text-7xl filter drop-shadow-lg">
                     {e.icon}

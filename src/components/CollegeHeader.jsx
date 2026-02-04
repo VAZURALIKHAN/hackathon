@@ -28,12 +28,12 @@ const CollegeHeader = () => {
           {/* MOBILE ONLY: Top Row with Logos */}
           <div className="flex w-full justify-between items-center md:hidden mb-1">
             <img
-              src="/collegeleft.png"
+              src={`${import.meta.env.BASE_URL}collegeleft.png`}
               alt="St. Joseph College Logo"
               className="h-14 w-auto object-contain"
             />
             <img
-              src="/college-right.png"
+              src={`${import.meta.env.BASE_URL}college-right.png`}
               alt="Accreditation Logo"
               className="h-14 w-auto object-contain"
             />
@@ -42,7 +42,7 @@ const CollegeHeader = () => {
           {/* DESKTOP ONLY: LEFT LOGO */}
           <div className="hidden md:flex w-28 md:w-36 justify-start">
             <img
-              src="/collegeleft.png"
+              src={`${import.meta.env.BASE_URL}collegeleft.png`}
               alt="St. Joseph College Logo"
               className="h-20 md:h-28 w-auto object-contain"
             />
@@ -93,7 +93,7 @@ const CollegeHeader = () => {
             <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 mt-3">
               {[5, 2, 1, 3, 4].map((num) => (
                 <div key={num} className="p-1 bg-white rounded-md sm:rounded-lg shadow-sm">
-                  <img src={`/logos/logo${num}.png`} alt={`Partner ${num}`} className="w-8 h-8 xs:w-10 xs:h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
+                  <img src={`${import.meta.env.BASE_URL}logos/logo${num}.png`} alt={`Partner ${num}`} className="w-8 h-8 xs:w-10 xs:h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
                 </div>
               ))}
             </div>
@@ -102,7 +102,7 @@ const CollegeHeader = () => {
           {/* DESKTOP ONLY: RIGHT LOGO */}
           <div className="hidden md:flex w-28 md:w-36 justify-end">
             <img
-              src="/college-right.png"
+              src={`${import.meta.env.BASE_URL}college-right.png`}
               alt="Accreditation Logo"
               className="h-20 md:h-28 w-auto object-contain"
             />

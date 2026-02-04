@@ -81,9 +81,7 @@ const Hero = () => {
                   px-2
                 "
                 style={{
-                  textShadow: '0 0 30px , 0 0 60px rgba(217, 255, 147, 0.7), 0 0 90px rgba(56,189,248,0.5)',
-                  fontFamily: 'Impact, "Arial Black", sans-serif',
-                  WebkitTextStroke: '1px rgba(210, 249, 12, 0.04)'
+                  fontFamily: 'sans-serif'
                 }}
               >
                 HACKATHON'26
@@ -117,9 +115,9 @@ const Hero = () => {
           {/* HACKATHON LOGO */}
           <div className="flex justify-center mb-4">
             <img
-              src="/hackathon-logo.png"
+              src={`${import.meta.env.BASE_URL}hackathon-logo.png`}
               alt="Hackathon 2026 Logo"
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 object-contain"
+              className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] object-contain"
             />
           </div>
 
