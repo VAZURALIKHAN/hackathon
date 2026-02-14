@@ -1,10 +1,10 @@
 export const events = [
   {
-    title: "UI & UX DESIGN",
-    desc: "Design stunning user interfaces with intuitive user experiences. Focus on aesthetics, usability, and modern design principles.",
-    icon: "🎨",
-    image: "event-icons/event_ui.png",
-    category: "Design"
+    title: "NETWORK SECURITY",
+    desc: "It ensures that sensitive information remains confidential, accurate, and accessible only to authorized users, maintaining the overall safety and reliability of the network system.",
+    icon: "🛡️",
+    image: "event-icons/event_net.png",
+    category: "security"
   },
   {
     title: "CLOUD & DEVOPS",
